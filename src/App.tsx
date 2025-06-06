@@ -1,10 +1,12 @@
-// import { useState } from "react";
 import "./App.css";
+import Posts from "./components/Posts";
 
 function App() {
-  // const [count, setCount] = useState(0);
-
-  return <div></div>;
+  return (
+    <div className="w-full h-screen flex justify-center items-center p-6">
+      <Posts />
+    </div>
+  );
 }
 
 export default App;
