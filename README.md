@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# Posts Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small React-based project built as part of a technical challenge to demonstrate my front-end proficiency with modern development tools and patterns.
 
-Currently, two official plugins are available:
+## Objective
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create a simple front-end application that:
 
-## Expanding the ESLint configuration
+- Asynchronously fetches post data from an API.
+- Displays a loading state while the data is being retrieved.
+- Handles and displays errors if the fetch fails.
+- Displays an empty state when no posts are returned.
+- Displays a list of posts once successfully retrieved.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React** (via Vite) for fast development and build speed.
+- **Tailwind CSS** for utility-first, responsive styling.
+- **shadcn/ui** component library for accessible, consistent UI elements.
+- **TypeScript** for type safety and maintainability.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features Implemented
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Declarative UI built with composable components and styled using TailwindCSS and Shadcn primitives.
+- Graceful handling of edge cases with clear UX feedback for loading, error, and empty states.
+- Clear, readable code structure designed for scalability and team collaboration.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 📁 Getting Started
+
+To run the project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/jbettmann/wb-react-posts.git
+cd wb-react-posts
+
+# Install dependencies
+pnpm install
+
+# Start the dev server
+pnpm run dev
 ```
